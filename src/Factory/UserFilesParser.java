@@ -15,22 +15,33 @@ public class UserFilesParser {
 
     protected DriverFactory driverFactory = new DriverFactory();
     protected IFilesDriver filesDriver;
+    protected String type;
 
-    public void createDriver(String type, String filename, String content) {
-        if (type.equals("csv")) {
+    public UserFilesParser(String type) {
+        this.type = type;
+    }
+
+    
+    
+    private void createDriver() {
+        if (this.type.equals("csv")) {
             filesDriver = driverFactory.getDriver(driverFactory.csvFile);
-            filesDriver.write(filename, content);
+            
         }
 
-        if (type.equals("xml")) {
+        if (this.type.equals("xml")) {
             filesDriver = driverFactory.getDriver(driverFactory.xmlFile);
-            filesDriver.write(filename, content);
         }
 
     }
+    
+    
 
     public void getUsers(String filename) {
+        createDriver();
+        filesDriver.write(filename, "Any content");
         filesDriver.read(filename);
+        
     }
 
 }

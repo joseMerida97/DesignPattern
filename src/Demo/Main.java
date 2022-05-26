@@ -14,8 +14,7 @@ import Factory.UserFilesParser;
 public class Main {
     
      public static void main(String[] args){
-         UserFilesParser parser=new UserFilesParser();
-         parser.createDriver("csv", "Test", "FirstName: Jose\n LastName: Merida");
+         UserFilesParser parser=new UserFilesParser("xml");
          parser.getUsers("Jose");
 
     }
