@@ -3,22 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Products;
+package Driver;
 
 /**
  *
  * @author JOSE MERIDA ROCA
  */
-public class CsvDriver implements IFilesDriver{
+public class XmlDriver  implements IFilesDriver{
 
     @Override
     public void read(String filename) {
-        System.out.println("Reading "+ filename+".csv . . .");
+        System.out.println("Reading XML"+ filename+".xml . . .");
     }
 
     @Override
     public void write(String filename, String content) {
-        System.out.println("Writing CSV. . .\n "+"Filename: "+filename+"\n"+ "Content: "+content);
+    System.out.println("Writing XML. . .\n "+"Filename: "+filename+"\n"+ "Content: "+content);
+
     }
     
 }
