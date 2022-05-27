@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Factory;
+package FactoryMethod.Factory;
 
-import Driver.IFilesDriver;
+import FactoryMethod.Driver.IFilesDriver;
 
 /**
  *
