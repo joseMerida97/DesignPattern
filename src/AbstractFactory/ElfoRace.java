@@ -4,7 +4,7 @@ public class ElfoRace implements IRace {
 
     @Override
     public void populate() {
-        // TODO Auto-generated method stub
+        System.out.println("Creating ElfoRace");
         
     }
 

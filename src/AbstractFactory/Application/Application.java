@@ -10,7 +10,7 @@ public class Application {
     }
 
     public void create(){
-        abstractFactory.createRace();
-        abstractFactory.createCity();
+        abstractFactory.createRace().populate();
+        abstractFactory.createCity().getHouse();
     }   
 }

@@ -4,26 +4,24 @@ public class OrcoRace implements IRace {
 
     @Override
     public void populate() {
-        // TODO Auto-generated method stub
+        System.out.println("Creating ElfoRace");
+
         
     }
 
     @Override
     public void fight() {
-        // TODO Auto-generated method stub
-        
+  System.out.println("Fight well!");        
     }
 
     @Override
     public void planStrategies() {
-        // TODO Auto-generated method stub
-        
+        System.out.println("Rude!");
     }
 
     @Override
     public void work() {
-        // TODO Auto-generated method stub
-        
+        System.out.println("Work hard");
     }
     
 }
