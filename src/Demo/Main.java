@@ -5,7 +5,10 @@
  */
 package Demo;
 
+import Driver.XmlDriver;
+import Factory.IFactory;
 import Factory.UserFilesParser;
+import Factory.XmlFactory;
 
 
 /**
@@ -15,8 +18,11 @@ import Factory.UserFilesParser;
 public class Main {
     
      public static void main(String[] args){
-         UserFilesParser parser=new UserFilesParser("xml");
+         IFactory xmlDriver=new XmlFactory();
+         UserFilesParser parser=new UserFilesParser(xmlDriver);
          parser.getUsers("Jose");
+         
+         
 
     }
     

@@ -5,7 +5,6 @@
  */
 package Factory;
 
-import Driver.IFilesDriver;
 
 /**
  *
@@ -13,34 +12,21 @@ import Driver.IFilesDriver;
  */
 public class UserFilesParser {
 
-    protected DriverFactory driverFactory = new DriverFactory();
-    protected IFilesDriver filesDriver;
-    protected String type;
+    protected IFactory driverFactory ;
+   
 
-    public UserFilesParser(String type) {
-        this.type = type;
+    public UserFilesParser(IFactory driveFactory) {
+        this.driverFactory=driveFactory;
     }
 
     
-    
-    private void createDriver() {
-        if (this.type.equals("csv")) {
-            filesDriver = driverFactory.getDriver(driverFactory.csvFile);
-            
-        }
-
-        if (this.type.equals("xml")) {
-            filesDriver = driverFactory.getDriver(driverFactory.xmlFile);
-        }
-
-    }
     
     
 
     public void getUsers(String filename) {
-        createDriver();
-        filesDriver.write(filename, "Any content");
-        filesDriver.read(filename);
+       
+        this.driverFactory.createFilesDrive().write(filename, "Any content");
+        this.driverFactory.createFilesDrive().read(filename);
         
     }
 
