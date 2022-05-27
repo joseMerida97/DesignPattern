@@ -11,6 +11,7 @@ public class Application {
 
     public void create(){
         abstractFactory.createRace().populate();
-        abstractFactory.createCity().getHouse();
+        abstractFactory.createCity().createCity();
+        abstractFactory.createHouse().getHouse();
     }   
 }

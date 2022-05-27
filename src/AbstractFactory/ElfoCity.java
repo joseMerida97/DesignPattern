@@ -1,10 +1,11 @@
 package AbstractFactory;
 
-public class ElfoCity implements IHouse{
+public class ElfoCity implements ICity{
 
     @Override
-    public void getHouse() {
-    System.out.println("Creating Elfo Cities with Towers. . .");        
+    public void createCity() {
+        System.out.println("Creating Elfo Cities. . .");        
+        
     }
     
 }

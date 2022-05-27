@@ -1,11 +1,13 @@
 package AbstractFactory;
 
-public class OrcoCity implements IHouse{
+public class OrcoCity implements ICity{
 
     @Override
-    public void getHouse() {
-       System.out.println("Creating Orco cities with caves. . .");
+    public void createCity() {
+       System.out.println("Creating Orco cities. . .");
         
     }
+
+   
     
 }
