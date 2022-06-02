@@ -7,7 +7,7 @@ public class Application {
         this.print = print;
     }
 
-    public void ShowNames(){
+    public void ShowNames() {
         this.print.print("JDoe");
     }
 }
