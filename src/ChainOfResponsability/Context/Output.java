@@ -23,5 +23,4 @@ public class Output {
         return date;
     }
 
-
 }

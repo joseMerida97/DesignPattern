@@ -5,5 +5,6 @@ import ChainOfResponsability.Context.Output;
 
 public interface ISanitizer {
     Output validate(Input request);
+
     void setNext(ISanitizer sanitizer);
 }

@@ -31,6 +31,5 @@ public class Demo {
         System.out.println(output.getDigit());
         System.out.println(output.getDate());
 
-
     }
 }

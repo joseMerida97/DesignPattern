@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 import ChainOfResponsability.Context.Input;
 import ChainOfResponsability.Context.Output;
 
-public class EmailVerifier extends ValidateHandler{
+public class EmailVerifier extends ValidateHandler {
 
     private String email;
 
@@ -17,13 +17,13 @@ public class EmailVerifier extends ValidateHandler{
     @Override
     public Output validate(Input request) {
         String regx = "^[A-Za-z0-9+_.-]+@(.+)$";
-        Pattern pattern=Pattern.compile(regx); 
+        Pattern pattern = Pattern.compile(regx);
         Matcher matcher = pattern.matcher(this.email);
-        if(!matcher.matches()){
+        if (!matcher.matches()) {
             request.replaceInput("email", "");
         }
 
         return super.validate(request);
     }
-    
+
 }
