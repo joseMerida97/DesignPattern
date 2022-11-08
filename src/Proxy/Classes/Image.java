@@ -7,7 +7,7 @@ public class Image {
 
     public Image(String id, String title,String classification) {
         this.id = id;
-        this.title = title;
+        this.title = title1;
         this.classification = classification;
     }
 
