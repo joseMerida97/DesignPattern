@@ -24,8 +24,7 @@ public class Demo {
         images.put("gory", new Image("10", "goryImg.jpg", "+18"));
 
         UserProfile userProfile = new UserProfile("lkj123", 15);
-        ImageProvider imageProvider = new ImageProvider(images);
-        CachedImageProvider proxy = new CachedImageProvider(imageProvider);
+        CachedImageProvider proxy1 = new CachedImageProvider(imageProvider);
         ImageDownloader imageDownloader = new ImageDownloader(proxy);
         imageDownloader.getPopularImageValidated(userProfile);
     }
